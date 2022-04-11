@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+#    RewriteCond %{HTTP_HOST} ^(.*\.)?sportpassword\.localhost [NC]
+#    RewriteCond %{HTTP_HOST} !=bm.sportpassword.localhost [NC]
+#    RewriteRule ^(.*)$ http://bm.sportpassword.localhost$1 [L,R=301]
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>

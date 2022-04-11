@@ -48,3 +48,8 @@ Thumbs.db
 *.mov
 *.wmv
 
+.DS_Store
+vendor/*
+composer.lock
+public/uploads/*
+
