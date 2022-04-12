@@ -6,6 +6,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Views\Twig;
 use DI\Container;
+use \Slim\Routing\RouteContext;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,14 @@ class HomeController extends Controller
 		$this->request = $request;
 		$this->response = $response;
 
-		//dump(__FUNCTION__.'.twig');
-		return $this->view->render($response, __FUNCTION__.'.twig', []);
+		//Get root URI
+		$uri = $request->getUri()->getPath();//echo($uri);exit;
+		if ($uri == "/") {
+			$this->ctrl = "home";
+			$this->action = "index";
+		}
+
+		$twig = $this->ctrl."/".$this->action.'.twig';
+		return $this->view->render($response, $twig, []);
 	}
 }

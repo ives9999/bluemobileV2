@@ -13,6 +13,9 @@ abstract class Controller
     protected $request;
     protected $response;
 
+    protected String $ctrl = "";
+    protected String $action = "";
+
 	public function __construct(Container $container)
 	{
 		$this->container = $container;//dump($container);
