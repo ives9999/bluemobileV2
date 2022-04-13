@@ -23,4 +23,26 @@ abstract class Controller
 		$view = $container->get(\Slim\Views\Twig::class);//dump($view);
 		$this->view = $view;
 	}
+
+	protected function init(Request $request, Response $response)
+	{
+		$this->request = $request;
+		$this->response = $response;
+
+		//Get root URI
+		$uri = $request->getUri()->getPath();//echo($uri);exit;
+		if ($uri == "/") {
+			$this->ctrl = "home";
+			$this->action = "index";
+		} else {
+			$pattern = '/^\/([^\/]+)/';
+			if (preg_match($pattern, $uri, $matches)) {
+				//dump($matches);
+				if (count($matches) > 0) {
+					$this->ctrl = $matches[1];
+				}
+			}
+		}
+		//dump($this->ctrl);
+	}
 }

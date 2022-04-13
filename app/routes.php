@@ -9,3 +9,5 @@
 //     return $response;
 // });
 $app->get('/', ['bluemobile\Controllers\HomeController', 'index'])->setName('home.index');
+
+$app->get('/contact', ['bluemobile\Controllers\ContactController', 'index'])->setName('contact.index');
