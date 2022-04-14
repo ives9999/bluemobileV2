@@ -4,7 +4,6 @@ namespace bluemobile\Controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use \Slim\Routing\RouteContext;
 
 class ContactController extends Controller
 {

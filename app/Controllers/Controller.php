@@ -35,14 +35,18 @@ abstract class Controller
 			$this->ctrl = "home";
 			$this->action = "index";
 		} else {
-			$pattern = '/^\/([^\/]+)/';
+			$pattern = '/\/([^\/]*)\/?([^\/]*)?/';
 			if (preg_match($pattern, $uri, $matches)) {
 				//dump($matches);
-				if (count($matches) > 0) {
+				if (count($matches) == 3) {
 					$this->ctrl = $matches[1];
+					$this->action = (!empty($matches[2])) ? $matches[2] : "index";
 				}
 			}
 		}
-		//dump($this->ctrl);
+		//echo ("ctrl:".$this->ctrl."<br>"."action:".$this->action);exit;
+
+		$this->view->offsetSet('ctrl', $this->ctrl);
+		$this->view->offsetSet('action', $this->action);
 	}
 }
