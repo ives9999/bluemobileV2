@@ -5,6 +5,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use DI\Container;
 use Slim\Views\Twig;
+use Slim\Routing\RouteContext;
 
 abstract class Controller
 {
@@ -48,5 +49,10 @@ abstract class Controller
 
 		$this->view->offsetSet('ctrl', $this->ctrl);
 		$this->view->offsetSet('action', $this->action);
+
+		$routeContext = RouteContext::fromRequest($request);
+		$routeParser = $routeContext->getRouteParser();//dump($routeParser);
+		//$router = $this->container->get('router');
+		//$this->view->addExtension(new \Slim\Views\TwigExtension($routeParser, "/"));
 	}
 }
