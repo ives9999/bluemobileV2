@@ -3,21 +3,22 @@ namespace bluemobile\Controllers;
 
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use DI\Container;
+use Psr\Container\ContainerInterface;
 use Slim\Views\Twig;
 use Slim\Routing\RouteContext;
 
 abstract class Controller
 {
-	protected Container $container;
+	protected ContainerInterface $container;
     protected Twig $view;
     protected $request;
     protected $response;
+    protected $route;
 
     protected String $ctrl = "";
     protected String $action = "";
 
-	public function __construct(Container $container)
+	public function __construct(ContainerInterface $container)
 	{
 		$this->container = $container;//dump($container);
 
@@ -51,6 +52,10 @@ abstract class Controller
 		$this->view->offsetSet('action', $this->action);
 
 		$routeContext = RouteContext::fromRequest($request);
+		$this->route = $routeContext->getRoute();
+		$name = $this->route->getName();
+		//$arguments = $this->route->getArguments();dump($arguments);
+		//$basePath = $routeContext->getBasePath();dump($basePath);
 		$routeParser = $routeContext->getRouteParser();//dump($routeParser);
 		//$router = $this->container->get('router');
 		//$this->view->addExtension(new \Slim\Views\TwigExtension($routeParser, "/"));

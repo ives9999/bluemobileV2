@@ -7,27 +7,26 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class ServiceController extends Controller
 {
-	public function app(Request $request, Response $response)
+	/**
+ * Example GET route
+ *
+ * @param  ServerRequestInterface $request  PSR-7 request
+ * @param  ResponseInterface      $response  PSR-7 response
+ * @param  array                  $args Route parameters
+ *
+ * @return ResponseInterface
+ */
+	public function index(Request $request, Response $response, array $args)
 	{
+		//$args result
+		// array:1 [▼
+		//   "action" => "backend"
+		// ]
 		$this->init($request, $response);
 
-		$twig = $this->ctrl."/".$this->action.'.twig';
-		return $this->view->render($response, $twig, []);
-	}
+		$action = $this->route->getArgument("action");//dump($action);
 
-	public function backend(Request $request, Response $response)
-	{
-		$this->init($request, $response);
-
-		$twig = $this->ctrl."/".$this->action.'.twig';
-		return $this->view->render($response, $twig, []);
-	}
-
-	public function mascot(Request $request, Response $response)
-	{
-		$this->init($request, $response);
-
-		$twig = $this->ctrl."/".$this->action.'.twig';
+		$twig = $this->ctrl."/".$action.'.twig';
 		return $this->view->render($response, $twig, []);
 	}
 }
