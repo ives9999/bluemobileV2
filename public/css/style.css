@@ -3132,7 +3132,7 @@ footer .row > div:nth-child(5) .comon-footer{
 
 @media (max-width: 900px){
 	.mn-head {
-		background: #000;
+		background: #fff;
 	}
 	.aplications-part{
 		margin-top: 90px;
@@ -3488,7 +3488,7 @@ footer .row > div:nth-child(5) .comon-footer{
 		margin-bottom: 28px;
 	}
 	.mn-head{
-		background: #000;
+		background: #fff;
 	}
 	.sc-logo{
 		display: block;
