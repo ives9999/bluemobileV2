@@ -853,47 +853,24 @@
      
     <ul class="navbar-nav ms-auto mb-2 mt-lg-0 mb-lg-0 align-items-lg-center">
       <li class="nav-item">
-        <a class="nav-link active" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html">About</a>
-      </li>
-      
+        <a class="nav-link{% if ctrl == 'home' %} active {% endif %}" href="/">首頁</a>
+      </li>      
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Services
+        <a class="nav-link dropdown-toggle{% if ctrl == 'service' %} active {% endif %}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          服務內容
         </a>
         <ul class="dropdown-menu dropdown-menu1" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="itsolution.html">IT Solution</a></li>
-          <li><a class="dropdown-item" href="webdevelopment.html">Web Development</a></li>
-          <li><a class="dropdown-item" href="networking.html">Networking Services</a></li>
-          <li><a class="dropdown-item" href="seo.html">SEO Optimization</a></li>
-          <li><a class="dropdown-item" href="app.html">App Optimization</a></li>
-          <li><a class="dropdown-item" href="data.html">Data Recovery</a></li>
+          <li><a class="dropdown-item" href="/service/app">建置APP</a></li>
+          <li><a class="dropdown-item" href="/service/backend">建置雲端後台</a></li>
+          <li><a class="dropdown-item" href="/service/mascot">球隊logo與吉祥物設計</a></li>
         </ul>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="projects.html"> Projects</a>
+        <a class="nav-link{% if ctrl == 'about' %} active {% endif %}" href="projects.html">關於我們</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pricing.html">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="blog.html">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="career.html">Career</a>
-      </li>
-      
-       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-       
-      <li class="nav-item">
-        <a class="signiup" data-bs-toggle="modal" data-bs-target="#quickModal" >
-           Get It Support
-        </a>
+        <a class="nav-link{% if ctrl == 'contact' %} active {% endif %}" href="pricing.html">聯絡我們</a>
       </li>
     </ul>
     
