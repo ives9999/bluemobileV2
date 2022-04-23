@@ -15,20 +15,69 @@
 
       <div class="ecom-part">
       <div class="container">
-          <div class="row row-cols-1 row-cols-lg-2 gx-lg-5">
+          <div class="row row-cols-1 row-cols-lg-2 gx-lg-5 gallery">
               <div class="col" data-aos="fade-left" id="componentWrapper">
 
-                  <a  data-fancybox="gallery" href="/images/case_backend_1.png" data-lightbox="app" class="comon-projets">
-                    <figure>
-                       <img src="/images/case_backend_1_thumb.png" alt="backend1"/>
-                    </figure> 
-                 </a>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a  data-fancybox="gallery" href="/images/case_backend_1.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_1_thumb.png" alt="backend1"/>
+                        </figure> 
+                     </a>
+                     </div>
+                     <div class="col-lg-6">
+                     <a  data-fancybox="gallery" href="/images/case_backend_2.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_2_thumb.png" alt="backend2"/>
+                        </figure> 
+                     </a>
+                    </div>
+                  </div>  
 
-                 <a  data-fancybox="gallery" href="/images/case_backend_2.png" data-lightbox="app" class="comon-projets">
-                    <figure>
-                       <img src="/images/case_backend_2_thumb.png" alt="backend2"/>
-                    </figure> 
-                 </a>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a  data-fancybox="gallery" href="/images/case_backend_3.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_3_thumb.png" alt="backend3"/>
+                        </figure> 
+                     </a>
+                     </div>
+                     <div class="col-lg-6">
+                     <a  data-fancybox="gallery" href="/images/case_backend_4.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_4_thumb.png" alt="backend4"/>
+                        </figure> 
+                     </a>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a  data-fancybox="gallery" href="/images/case_backend_5.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_5_thumb.png" alt="backend5"/>
+                        </figure> 
+                     </a>
+                     </div>
+                     <div class="col-lg-6">
+                     <a  data-fancybox="gallery" href="/images/case_backend_6.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_6_thumb.png" alt="backend6"/>
+                        </figure> 
+                     </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <a  data-fancybox="gallery" href="/images/case_backend_7.png" class="comon-projets">
+                        <figure>
+                           <img src="/images/case_backend_7_thumb.png" alt="backend7"/>
+                        </figure> 
+                     </a>
+                     </div>
+                     
+                  </div>  
 
               </div>
               <div class="col " data-aos="fade-right">
@@ -104,20 +153,15 @@
 {% endblock %}
 
 {% block css %}
-  <link rel="stylesheet" href="/js/lightbox2/css/lightbox.min.css">
+   <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
 {% endblock %}
 
 {% block js %}
-<script src="/js/lightbox2/js/lightbox-plus-jquery.min.js"></script>
-
+<script src="js/jquery.fancybox.min.js"></script>
 <script type="text/javascript">
   function dump(info){
     console.info(info);
   }
-
-  // jQuery(document).ready(function($){
-  //   $('.lightbox').lightbox();
-  // });
 </script>
 {% endblock %}  
 
