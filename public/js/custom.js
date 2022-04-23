@@ -16,79 +16,79 @@ $(document).ready(function() {
           }
       });
   });
-$(document).ready(function(){
-    $('.ps-sild').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-		dots:false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items:1
-            },
-            1000: {
-                items:4
-            }
-        }
-    })
+// $(document).ready(function(){
+//     $('.ps-sild').owlCarousel({
+//         loop: true,
+//         margin: 10,
+//         nav: true,
+// 		dots:false,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             600: {
+//                 items:1
+//             },
+//             1000: {
+//                 items:4
+//             }
+//         }
+//     })
 	
-	$('.best-sl-m').owlCarousel({
+// 	$('.best-sl-m').owlCarousel({
         
-		autoplay:true,
-    margin:25,
-        nav: false,
-		dots:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items:1
-            },
-            1000: {
-                items:3
-            }
-        }
-    })
-	$('.news-slid').owlCarousel({
+// 		autoplay:true,
+//     margin:25,
+//         nav: false,
+// 		dots:true,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             600: {
+//                 items:1
+//             },
+//             1000: {
+//                 items:3
+//             }
+//         }
+//     })
+// 	$('.news-slid').owlCarousel({
         
-		autoplay:true,
-        nav: false,
-		margin: 20,
-		dots:true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items:1
-            },
-            1000: {
-                items:3
-            }
-        }
-    })
+// 		autoplay:true,
+//         nav: false,
+// 		margin: 20,
+// 		dots:true,
+//         responsive: {
+//             0: {
+//                 items: 1
+//             },
+//             600: {
+//                 items:1
+//             },
+//             1000: {
+//                 items:3
+//             }
+//         }
+//     })
 
-    $('.team-slid').owlCarousel({
+//     $('.team-slid').owlCarousel({
         
-        autoplay:true,
-        loop:true,
-         nav: true,
-        margin: 20,
-        dots:false,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items:1
-                },
-                1000: {
-                    items:4
-                }
-            }
-    })
-});
+//         autoplay:true,
+//         loop:true,
+//          nav: true,
+//         margin: 20,
+//         dots:false,
+//             responsive: {
+//                 0: {
+//                     items: 1
+//                 },
+//                 600: {
+//                     items:1
+//                 },
+//                 1000: {
+//                     items:4
+//                 }
+//             }
+//     })
+// });

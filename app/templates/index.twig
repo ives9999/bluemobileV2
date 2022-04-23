@@ -266,14 +266,15 @@ window.onload = function(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js">
 </script>
 <!-- Owl Carousel -->
-<script src="/js/owl.carousel.min.js"></script>
+{# <script src="/js/owl.carousel.min.js"></script>
 <script src="/js/mixitup.min.js" ></script>
-<script>
-   var mixer = mixitup('.gallery');
+ #}<script>
+   //var mixer = mixitup('.gallery');
 </script>
 <script src="/js/custom.js"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
   <script>
     AOS.init({
       offset: 100,
@@ -286,6 +287,9 @@ window.onload = function(){
     
   </script>
 
+{% block css %}{% endblock %}  
+
+{% block js %}{% endblock %}
   
 
 </body>
